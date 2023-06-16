@@ -1,8 +1,8 @@
 .imgcls {
-	font-family: "ITF Devanagari Marathi";
+	font-family: "Open-San";
 	font-style: normal;
 	font-weight: 500;
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 36px;
 	display: flex;
 	border-bottom: 1px solid black;
@@ -10,8 +10,8 @@
 }
 
 .imgcls img {
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 }
 
 .imgcls p {
@@ -27,4 +27,38 @@
 	color: white;
 	font-size: 24px;
 	padding: 0.5rem 1rem;
+	margin: 1rem;
+	
+	
+}
+
+.rowbox{
+	background: #FFFFFF;
+box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+.row-heading{
+	font-size: 24px;
+	padding: 0.5rem 1rem;
+	padding-top: 1.5rem;
+	font-weight: 700;
+	line-height: 36px;
+	
+}
+
+.boxrow{
+	padding-top: 1rem;
+	
+	background: #E8ECF3;
+box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+height: 200px;
+}
+
+.boxsubrow{
+	height: 140px;
+	width: 20px;
+	padding:.1rem;
+	margin-left: 6rem;
+	background: #FFFFFF;
+box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
 }

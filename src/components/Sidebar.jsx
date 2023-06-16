@@ -1,5 +1,6 @@
 import { Nav } from "react-bootstrap";
 import Home from "./Home";
+import Configure from "./Configure";
 
 export const links = [
 	{
@@ -12,7 +13,8 @@ export const links = [
 		name: "Configure",
 		link: "configure",
 		icon: "/images/2.png",
-		element: <>Hello World</>,
+		element: <Configure/>,
+		
 	},
 	{
 		name: "Master",
