@@ -6,87 +6,72 @@ const data = [
 	{
 		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		docno: 1234567890,
+		date: "12/03/20323",
+		carriedby: "Lorem ipsum dolor",
+		outwardtype: "Lorem ipsum dolor",
+		status: "Lorem ipsum dolor",
 	},
 	{
-		id: 2,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		docno: 1234567890,
+		date: "12/03/20323",
+		carriedby: "Lorem ipsum dolor",
+		outwardtype: "Lorem ipsum dolor",
+		status: "Lorem ipsum dolor",
 	},
 	{
-		id: 3,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		docno: 1234567890,
+		date: "12/03/20323",
+		carriedby: "Lorem ipsum dolor",
+		outwardtype: "Lorem ipsum dolor",
+		status: "Lorem ipsum dolor",
 	},
 	{
-		id: 4,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		docno: 1234567890,
+		date: "12/03/20323",
+		carriedby: "Lorem ipsum dolor",
+		outwardtype: "Lorem ipsum dolor",
+		status: "Lorem ipsum dolor",
 	},
 	{
-		id: 5,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		docno: 1234567890,
+		date: "12/03/20323",
+		carriedby: "Lorem ipsum dolor",
+		outwardtype: "Lorem ipsum dolor",
+		status: "Lorem ipsum dolor",
 	},
 	{
-		id: 6,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		docno: 1234567890,
+		date: "12/03/20323",
+		carriedby: "Lorem ipsum dolor",
+		outwardtype: "Lorem ipsum dolor",
+		status: "Lorem ipsum dolor",
 	},
 	{
-		id: 6,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
 	},
 	{
-		id: 7,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
 	},
 	{
-		id: 8,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
 	},
 ];
 
-const Item = () => {
+const Outward = () => {
 	const [showModal, setShowModal] = React.useState(false);
 
 	return (
@@ -96,7 +81,6 @@ const Item = () => {
 					<div className="inner-box" onClick={() => setShowModal(true)}>
 						+ New
 					</div>
-					<div className="inner-box">Delete</div>
 				</div>
 			</Row>
 
@@ -104,12 +88,13 @@ const Item = () => {
 				<table>
 					<thead>
 						<tr>
-							<th>Item Name</th>
-							<th>Item Code</th>
-							<th>Unit</th>
-							<th>Description</th>
-							<th>Email ID</th>
-							<th>Inventory Item</th>
+							<th>Action</th>
+							<th>Document No.</th>
+							<th>Date</th>
+
+							<th>Carried By</th>
+							<th>Outward Type</th>
+							<th>Status</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -121,11 +106,12 @@ const Item = () => {
 										<img src="/images/edit.png" width={15} height={10} />
 									</td>
 
-									<td>{value.itemname}</td>
-									<td>{value.itemcode}</td>
-									<td>{value.unit}</td>
-									<td>{value.description}</td>
-									<td>{value.inventoryitem}</td>
+									<td>{value.docno}</td>
+									<td>{value.date}</td>
+
+									<td>{value.carriedby}</td>
+									<td>{value.outwardtype}</td>
+									<td>{value.status}</td>
 								</tr>
 							);
 						})}
@@ -138,45 +124,21 @@ const Item = () => {
 				onHide={() => setShowModal(false)}
 			>
 				<Modal.Header>
-					<Modal.Title style={{ textAlign: "center" }}>
-						New Item
-					</Modal.Title>
+					<Modal.Title style={{ textAlign: "center" }}>New Outward</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 					<Form>
-					<Row style={{ marginBottom: "1.2rem" }}>
+						<Row style={{ marginBottom: "1.2rem" }}>
 							<Col>
-								<Form.Label>Item Name</Form.Label>
+								<Form.Label>Date</Form.Label>
 								<Form.Control className="formfield" placeholder="Enter " />
 							</Col>
 							<Col>
-								<Form.Label>Item Code</Form.Label>
+								<Form.Label>Requested By</Form.Label>
 								<Form.Control className="formfield" placeholder="Enter" />
 							</Col>
 							<Col>
-								<Form.Label>Description</Form.Label>
-								<Form.Control className="formfield" placeholder="Enter" />
-							</Col>
-						</Row>
-						<Row style={{ marginBottom: "1.2rem" }}>
-							<Col>
-								<Form.Label>Unit</Form.Label>
-								<Form.Select
-									aria-label="Default select example"
-									className="formfield"
-								>
-									<option>Select </option>
-									<option value="1">One</option>
-									<option value="2">Two</option>
-									<option value="3">Three</option>
-								</Form.Select>
-							</Col>
-							<Col>
-								<Form.Label>Item Rate</Form.Label>
-								<Form.Control className="formfield" placeholder="Enter Name" />
-							</Col>
-							<Col>
-								<Form.Label>Serial No</Form.Label>
+								<Form.Label>Outward Type</Form.Label>
 								<Form.Select
 									aria-label="Default select example"
 									className="formfield"
@@ -190,7 +152,7 @@ const Item = () => {
 						</Row>
 						<Row style={{ marginBottom: "1.2rem" }}>
 							<Col>
-								<Form.Label>Batch No</Form.Label>
+								<Form.Label>Documemnt No</Form.Label>
 								<Form.Select
 									aria-label="Default select example"
 									className="formfield"
@@ -201,9 +163,9 @@ const Item = () => {
 									<option value="3">Three</option>
 								</Form.Select>
 							</Col>
-							
+
 							<Col>
-								<Form.Label>Inventory Item</Form.Label>
+								<Form.Label>Carried</Form.Label>
 								<Form.Select
 									aria-label="Default select example"
 									className="formfield"
@@ -213,11 +175,47 @@ const Item = () => {
 									<option value="2">Two</option>
 									<option value="3">Three</option>
 								</Form.Select>
+							</Col>
+							<Col>
+								<Form.Label>Mobile No</Form.Label>
+								<Form.Control className="formfield" placeholder="1234567890" />
 							</Col>
 						</Row>
-					
-						
 					</Form>
+					<div style={{ marginTop: "2rem" }}>
+						<table>
+							<thead>
+								<tr>
+									<th>Seq</th>
+									<th>Description</th>
+									<th>Code</th>
+									<th>Qty</th>
+									<th>Unit</th>
+									<th>Rate</th>
+									<th>Amount</th>
+									<th>Serial/Batch No.</th>
+									<th>Remark</th>
+									<th>More details</th>
+								</tr>
+							</thead>
+							<tbody>
+								{/* {data.map((value, key) => {
+							return (
+								<tr key={key}>
+									<td className="d-flex gap-2 h-100">
+										<input type="checkbox" id="" />
+										<img src="/images/edit.png" width={15} height={10} />
+									</td> */}
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</Modal.Body>
 				<Modal.Footer style={{ justifyContent: "center", gap: "20px" }}>
 					<Button className="formbtn" onClick={() => setShowModal(false)}>
@@ -236,4 +234,4 @@ const Item = () => {
 	);
 };
 
-export default Item;
+export default Outward;

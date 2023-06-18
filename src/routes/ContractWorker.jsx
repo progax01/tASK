@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Outlet, useLocation } from "react-router-dom";
 
-const Material = () => {
+const ContractWorker = () => {
 	const location = useLocation();
 
 	let locations = location.pathname.split("/").splice(1);
@@ -36,4 +36,4 @@ const Material = () => {
 	);
 };
 
-export default Material;
+export default ContractWorker;

@@ -86,7 +86,7 @@ const data = [
 	},
 ];
 
-const Visitors = () => {
+const Visitor = () => {
 	const [showModal, setShowModal] = React.useState(false);
 
 	return (
@@ -219,7 +219,7 @@ const Visitors = () => {
 						className="clsbtn"
 						onClick={() => setShowModal(false)}
 					>
-						Cancle
+						Cancel
 					</Button>
 				</Modal.Footer>
 			</Modal>
@@ -227,4 +227,4 @@ const Visitors = () => {
 	);
 };
 
-export default Visitors;
+export default Visitor;

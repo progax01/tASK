@@ -6,97 +6,88 @@ const data = [
 	{
 		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		itemname: "Biscuit / Toast",
+		price: "10.00",
+		subsidy: "0.00",
 	},
 	{
-		id: 2,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		itemname: "Biscuit / Toast",
+		price: "10.00",
+		subsidy: "0.00",
 	},
 	{
-		id: 3,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		itemname: "Biscuit / Toast",
+		price: "10.00",
+		subsidy: "0.00",
 	},
 	{
-		id: 4,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		itemname: "Biscuit / Toast",
+		price: "10.00",
+		subsidy: "0.00",
 	},
 	{
-		id: 5,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		itemname: "Biscuit / Toast",
+		price: "10.00",
+		subsidy: "0.00",
 	},
 	{
-		id: 6,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		itemname: "Biscuit / Toast",
+		price: "10.00",
+		subsidy: "0.00",
 	},
 	{
-		id: 6,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		itemname: "Biscuit / Toast",
+		price: "10.00",
+		subsidy: "0.00",
 	},
 	{
-		id: 7,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		itemname: "Biscuit / Toast",
+		price: "10.00",
+		subsidy: "0.00",
 	},
 	{
-		id: 8,
+		id: 1,
 		selected: false,
-		itemname: "34mm x 21 mtr wir rope steel with femish ",
-		itemcode: "",
-		unit: "MTR",
-		description: "",
-		inventoryitem: "No",
+		itemname: "Biscuit / Toast",
+		price: "10.00",
+		subsidy: "0.00",
+	},
+	{
+		id: 1,
+		selected: false,
+		itemname: "Biscuit / Toast",
+		price: "10.00",
+		subsidy: "0.00",
+	},
+
+	{
+		id: 1,
+		selected: false,
 	},
 ];
 
-const Item = () => {
+const MenuItems = () => {
 	const [showModal, setShowModal] = React.useState(false);
 
 	return (
 		<Container fluid>
 			<Row>
 				<div className="outer-box">
-					<div className="inner-box" onClick={() => setShowModal(true)}>
-						+ New
-					</div>
-					<div className="inner-box">Delete</div>
+					<div className="inner-box">+ New</div>
 				</div>
 			</Row>
 
@@ -104,12 +95,10 @@ const Item = () => {
 				<table>
 					<thead>
 						<tr>
+							<th>Action</th>
 							<th>Item Name</th>
-							<th>Item Code</th>
-							<th>Unit</th>
-							<th>Description</th>
-							<th>Email ID</th>
-							<th>Inventory Item</th>
+							<th>Price</th>
+							<th>Subsidy</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -122,10 +111,8 @@ const Item = () => {
 									</td>
 
 									<td>{value.itemname}</td>
-									<td>{value.itemcode}</td>
-									<td>{value.unit}</td>
-									<td>{value.description}</td>
-									<td>{value.inventoryitem}</td>
+									<td>{value.price}</td>
+									<td>{value.subsidy}</td>
 								</tr>
 							);
 						})}
@@ -138,29 +125,33 @@ const Item = () => {
 				onHide={() => setShowModal(false)}
 			>
 				<Modal.Header>
-					<Modal.Title style={{ textAlign: "center" }}>
-						New Item
-					</Modal.Title>
+					<Modal.Title style={{ textAlign: "center" }}>New Item</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 					<Form>
-					<Row style={{ marginBottom: "1.2rem" }}>
+						<Row style={{ marginBottom: "1.2rem" }}>
 							<Col>
-								<Form.Label>Item Name</Form.Label>
+								<Form.Label>Department</Form.Label>
 								<Form.Control className="formfield" placeholder="Enter " />
 							</Col>
 							<Col>
-								<Form.Label>Item Code</Form.Label>
+								<Form.Label>Date</Form.Label>
 								<Form.Control className="formfield" placeholder="Enter" />
 							</Col>
 							<Col>
-								<Form.Label>Description</Form.Label>
-								<Form.Control className="formfield" placeholder="Enter" />
+								<div className="m-4">
+									<Form.Label></Form.Label>
+									<button className=" formbtn">
+										<Form.Control className="d-none" type="file" />
+										Upload
+									</button>
+									<Form.Label className="mx-3">Choose file </Form.Label>
+								</div>
 							</Col>
 						</Row>
 						<Row style={{ marginBottom: "1.2rem" }}>
 							<Col>
-								<Form.Label>Unit</Form.Label>
+								<Form.Label>Host</Form.Label>
 								<Form.Select
 									aria-label="Default select example"
 									className="formfield"
@@ -172,11 +163,11 @@ const Item = () => {
 								</Form.Select>
 							</Col>
 							<Col>
-								<Form.Label>Item Rate</Form.Label>
-								<Form.Control className="formfield" placeholder="Enter Name" />
+								<Form.Label>Time</Form.Label>
+								<Form.Control className="formfield" placeholder="Enter" />
 							</Col>
 							<Col>
-								<Form.Label>Serial No</Form.Label>
+								<Form.Label>Company</Form.Label>
 								<Form.Select
 									aria-label="Default select example"
 									className="formfield"
@@ -190,7 +181,11 @@ const Item = () => {
 						</Row>
 						<Row style={{ marginBottom: "1.2rem" }}>
 							<Col>
-								<Form.Label>Batch No</Form.Label>
+								<Form.Label> Duration hh:mm</Form.Label>
+								<Form.Control className="formfield" placeholder="00:00" />
+							</Col>
+							<Col>
+								<Form.Label>Visitor</Form.Label>
 								<Form.Select
 									aria-label="Default select example"
 									className="formfield"
@@ -201,9 +196,9 @@ const Item = () => {
 									<option value="3">Three</option>
 								</Form.Select>
 							</Col>
-							
+
 							<Col>
-								<Form.Label>Inventory Item</Form.Label>
+								<Form.Label>Meeting Location</Form.Label>
 								<Form.Select
 									aria-label="Default select example"
 									className="formfield"
@@ -215,8 +210,46 @@ const Item = () => {
 								</Form.Select>
 							</Col>
 						</Row>
-					
-						
+						<Row style={{ marginBottom: "1.2rem" }}>
+							<Col>
+								<Form.Label> Name</Form.Label>
+								<Form.Control className="formfield" placeholder="Enter" />
+							</Col>
+							<Col>
+								<Form.Label> Serial No.</Form.Label>
+								<Form.Control className="formfield" placeholder="Enter" />
+							</Col>
+							<Col>
+								<Form.Label>Visit type</Form.Label>
+								<Form.Select
+									aria-label="Default select example"
+									className="formfield"
+								>
+									<option>Select </option>
+									<option value="1">One</option>
+									<option value="2">Two</option>
+									<option value="3">Three</option>
+								</Form.Select>
+							</Col>
+						</Row>
+						<Row style={{ marginBottom: "1.2rem" }}>
+							<Col>
+								<Form.Label> Remark</Form.Label>
+								<Form.Control
+									className="formfield"
+									type="textbox"
+									placeholder="Describe"
+								/>
+							</Col>
+							<Col>
+								<Form.Label> ID Type</Form.Label>
+								<Form.Control className="formfield" placeholder="Enter" />
+							</Col>
+							<Col>
+								<Form.Label> ID Number</Form.Label>
+								<Form.Control className="formfield" placeholder="Enter" />
+							</Col>
+						</Row>
 					</Form>
 				</Modal.Body>
 				<Modal.Footer style={{ justifyContent: "center", gap: "20px" }}>
@@ -236,4 +269,4 @@ const Item = () => {
 	);
 };
 
-export default Item;
+export default MenuItems;

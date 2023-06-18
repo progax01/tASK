@@ -1,7 +1,7 @@
 import { Accordion } from "react-bootstrap";
 import Home from "./Home";
 import Configure from "../routes/Configure";
-import Visitors from "./Visitors";
+import Visitor from "./Visitor";
 import { NavLink } from "react-router-dom";
 import Host from "./Host";
 import Master from "../routes/Master";
@@ -9,6 +9,22 @@ import VisitorCompany from "./Visitor Company";
 import Item from "./Item";
 import Contractor from "./Contractor";
 import Worker from "./Worker";
+import Visitors from "../routes/Visitors";
+import Appointment from "./Appointment";
+import SingleDayPass from "./SingleDayPass";
+import MultiDayPass from "./MultiDayPass";
+import Material from "../routes/Master";
+import Outward from "./Outward";
+import Canteen from "../routes/Canteen";
+import Terminal from "./Terminal";
+import MenuItems from "./MenuIterms";
+import CanteenMenuDefinition from "./CanteenMenuDefinition";
+import GuestCoupon from "./GuestCoupon";
+import CanteenRegularization from "./CanteenRegularization";
+import CanteenRule from "./CanteenRule";
+import CanteenIncentive from "./CanteenIncentive";
+import FoodBooking from "./FoodBooking";
+import ContractWorker from "../routes/ContractWorker";
 
 export const links = [
 	{
@@ -81,7 +97,7 @@ export const links = [
 			{
 				name: "Visitor",
 				link: "/master/visitor",
-				element: <Visitors />,
+				element: <Visitor />,
 			},
 			{
 				name: "Item",
@@ -91,12 +107,12 @@ export const links = [
 			{
 				name: "Contractor",
 				link: "/master/contractor",
-				element: <Contractor/>,
+				element: <Contractor />,
 			},
 			{
 				name: "Worker",
 				link: "/master/worker",
-				element: <Worker/>,
+				element: <Worker />,
 			},
 		],
 	},
@@ -105,30 +121,148 @@ export const links = [
 		link: "/visitors",
 		icon: "/images/4.png",
 		element: <Visitors />,
+
+		subLinks: [
+			{
+				name: "Appointment",
+				link: "/visitors/appointment",
+				element: <Appointment />,
+			},
+			{
+				name: "Single Day Pass",
+				link: "/visitors/single-day-pass",
+				element: <SingleDayPass />,
+			},
+			{
+				name: "Multi Day Pass",
+				link: "/visitors/multi-day-pass",
+				element: <MultiDayPass />,
+			},
+			{
+				name: "Visitor Registration",
+				link: "/visitors/visitor-registration",
+				element: <>Visitor Registration</>,
+			},
+		],
 	},
+
 	{
 		name: "Material",
 		link: "/material",
 		icon: "/images/5.png",
-		element: <>Hello World</>,
+		element: <Material />,
+		subLinks: [
+			{
+				name: "Outward",
+				link: "/material/outward",
+				element: <Outward />,
+			},
+			{
+				name: "Inward Confirmation",
+				link: "/material/inward-confirmation",
+				element: <>Inward Confirmation</>,
+			},
+			{
+				name: "Short Close Outward",
+				link: "/material/short-close-outward",
+				element: <>outward</>,
+			},
+			{
+				name: "Short Close Inward",
+				link: "/material/short-close-inward",
+				element: <>Short Close Inward</>,
+			},
+			{
+				name: "Purchase Order",
+				link: "/material/purchase-order",
+				element: <>Purchase Order</>,
+			},
+			{
+				name: "Inventory",
+				link: "/material/inventory",
+				element: <>Inventory</>,
+			},
+		],
 	},
+
 	{
 		name: "Canteen",
 		link: "/canteen",
 		icon: "/images/6.png",
-		element: <>Hello World</>,
+		element: <Canteen />,
+		subLinks: [
+			{
+				name: "Terminal",
+				link: "/canteen/terminal",
+				element: <Terminal />,
+			},
+			{
+				name: "Menu Items",
+				link: "/canteen/menu-items",
+				element: <MenuItems />,
+			},
+			{
+				name: "Menu Definition",
+				link: "/canteen/menu-definition",
+				element: <CanteenMenuDefinition />,
+			},
+			{
+				name: "Canteen Menu Definition",
+				link: "/canteen/canteen-menu-definition",
+				element: <CanteenMenuDefinition />,
+			},
+			{
+				name: "Guest Coupon",
+				link: "/canteen/guest-coupon",
+				element: <GuestCoupon />,
+			},
+			{
+				name: "Canteen Regularization",
+				link: "/canteen/Canteen-Regularization",
+				element: <CanteenRegularization />,
+			},
+			{
+				name: "Canteen Rule",
+				link: "/canteen/canteen-rule",
+				element: <CanteenRule />,
+			},
+			{
+				name: "Canteen Incentive",
+				link: "/canteen/canteen-incentive",
+				element: <CanteenIncentive />,
+			},
+			{
+				name: "Food Booking",
+				link: "/canteen/food-booking",
+				element: <FoodBooking />,
+			},
+		],
 	},
 	{
 		name: "Contract Worker",
-		link: "/contractworker",
+		link: "/contract-worker",
 		icon: "/images/7.png",
-		element: <>Hello World</>,
+		element: <ContractWorker />,
+		subLinks: [
+			{
+				name: "Worker Card",
+				link: "/contract-worker/worker-card",
+				element: <>asdf</>,
+			},
+			{
+				name: "Daily CW Requirment",
+				link: "/contract-worker/daily-cw-requirement",
+				element: <>jkhg</>
+			},
+		],
 	},
+
 	{
 		name: "Control Center",
-		link: "/control center",
+		link: "/control-center",
 		icon: "/images/8.png",
-		element: <>Hello World</>,
+		element: <>jkk</>,
+	
 	},
 	{
 		name: "Utility",
@@ -172,7 +306,7 @@ const Sidebar = () => {
 								width: 22,
 							}}
 						/>
-						<p className="mb-0">{i.name}</p>
+						<p className="mb-1">{i.name}</p>
 					</NavLink>
 				) : (
 					<Accordion className="mb-3" key={i.link}>
@@ -196,8 +330,8 @@ const Sidebar = () => {
 											to={s.link}
 											className={({ isActive }) =>
 												isActive
-													? "d-flex gap-3 nav-active mb-3  nav-normal"
-													: "d-flex gap-3 mb-3 nav-normal"
+													? "d-flex gap-3 nav-active  nav-normal"
+													: "d-flex gap-3 mb-1 nav-normal"
 											}
 										>
 											<p className="mb-1 fs-small">{s.name}</p>
