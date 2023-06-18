@@ -108,7 +108,7 @@ const Home = () => {
 
 				<Col xs={9}>
 					<Row className="section-heading">Visitor</Row>
-					<Row >
+					<Row>
 						<Col>
 							<Calendar />
 						</Col>
@@ -130,8 +130,8 @@ const Home = () => {
 							</p>
 						</Col>
 					</Row>
-					<Row className="section-heading"  >Contract Worker</Row>
-					<Row >
+					<Row className="section-heading">Contract Worker</Row>
+					<Row>
 						<Col className="rowbox">
 							<Calendar />
 						</Col>
@@ -141,72 +141,112 @@ const Home = () => {
 							</p>
 							<h6>Today’s Worker(s)</h6>
 							<div>
-							<ProgressBar completed = {60} labelAlignment="left" customLabel = {"Pass issued 329"} height="40px" bgColor = "orange" animateOnRender = {true} isLabelVisible = {true} />
-         <br></br>
-				 <ProgressBar completed = {46} labelAlignment="left" customLabel = {"Inside 46"} height="40px" bgColor = "green" animateOnRender = {true} isLabelVisible = {true} />
-         <br></br>
-				 <ProgressBar completed = {76} labelAlignment="left" customLabel = {"Card Submitted 200"} height="40px" bgColor = "red"  animateOnRender = {true} isLabelVisible = {true} />
-         <br></br>
-      
-                 </div>
-
-
+								<ProgressBar
+									completed={60}
+									labelAlignment="left"
+									customLabel={"Pass issued 329"}
+									height="40px"
+									bgColor="orange"
+									animateOnRender={true}
+									isLabelVisible={true}
+								/>
+								<br></br>
+								<ProgressBar
+									completed={46}
+									labelAlignment="left"
+									customLabel={"Inside 46"}
+									height="40px"
+									bgColor="green"
+									animateOnRender={true}
+									isLabelVisible={true}
+								/>
+								<br></br>
+								<ProgressBar
+									completed={76}
+									labelAlignment="left"
+									customLabel={"Card Submitted 200"}
+									height="40px"
+									bgColor="red"
+									animateOnRender={true}
+									isLabelVisible={true}
+								/>
+								<br></br>
+							</div>
 						</Col>
 
 						<Col className="rowbox">
-						<h6><strong>Inside</strong></h6>
+							<h6>
+								<strong>Inside</strong>
+							</h6>
 						</Col>
 					</Row>
 				</Col>
 			</Row>
 
 			<Container>
-			<Row >
-			<Col>
+				<Row>
+					<Col>
+						<Row className="row-heading">Material </Row>
+						<Row
+							className="boxrow"
+							style={{ marginRight: "1rem", marginBottom: "1rem" }}
+						>
+							<h6>Today’s RGP / NRGPToday’s RGP / NRGP</h6>
+							<p>No Materials</p>
+						</Row>
+						<Row
+							className="boxrow"
+							style={{ marginRight: "1rem", marginBottom: "1rem" }}
+						>
+							<h6>Status Wise List</h6>
+							<p>No Materials</p>
+						</Row>
+						<Row
+							className="boxrow"
+							style={{ marginRight: "1rem", marginBottom: "1rem" }}
+						>
+							<h6>Pending Returnable Outward</h6>
+							<p>No Materials</p>
+						</Row>
+					</Col>
 
-			<Row className="row-heading" >Material </Row>
-      <Row className="boxrow" style={{marginRight:"1rem",marginBottom:"1rem"}}>
-			<h6>Today’s RGP / NRGPToday’s RGP / NRGP</h6>
-			<p>No Materials</p>
-			</Row>
-			<Row className="boxrow" style={{marginRight:"1rem",marginBottom:"1rem"}}>
-			<h6>Status Wise List</h6>
-			<p>No Materials</p>
-			</Row>
-			<Row className="boxrow" style={{marginRight:"1rem",marginBottom:"1rem"}}>
-			<h6>Pending Returnable Outward</h6>
-			<p>No Materials</p>
-			</Row>
-			</Col>
-
-			<Col>
-			<Row className="row-heading" > Canteen Menu </Row>
-			<Row className="boxrow" style={{marginBottom:"1rem"}}>
-			
-			<h6>Next Menu</h6>
-			<p>Rojalin Hospitlity Service</p>
-			<p>Biscuit / toast, butter milk/chas...</p>
-			</Row>
-			<Row className="boxrow" style={{height:"416px"}}>
-			
-			<h6>Canteen Wastage (kg)</h6>
-			<Row className="boxsubrow" >
-      <p> Weekly Food Wastage (kg)</p>
-			</Row>
-			<Row className="boxsubrow" >
-      <p> Monthly Food Wastage (kg)</p>
-			</Row>
-
-			</Row>
-
-			</Col>
-      </Row>
-
+					<Col>
+						<Row className="row-heading"> Canteen Menu </Row>
+						<Row className="boxrow" style={{ marginBottom: "1rem" }}>
+							<h6>Next Menu</h6>
+							<p>Rojalin Hospitlity Service</p>
+							<p>Biscuit / toast, butter milk/chas...</p>
+						</Row>
+						<Row className="boxrow" style={{ height: "416px" }}>
+							<Col>
+								<Row>
+									<h6>Canteen Wastage (kg)</h6>
+								</Row>
+								<Row>
+									<Col className="boxsubrow">
+										<p> Weekly Food Wastage (kg)</p>
+										<img
+											src="/images/ic1.png"
+											style={{
+												height: "20px",
+												position: "absolute",
+												bottom: "10px",
+												right: "10px",
+											}}
+										></img>
+									</Col>
+								</Row>
+								<Row>
+									<Col className="boxsubrow">
+										<p> Monthly Food Wastage (kg)</p>
+									</Col>
+								</Row>
+							</Col>
+						</Row>
+					</Col>
+				</Row>
 			</Container>
-
 		</Container>
-
-		
 	);
 };
 

@@ -2,22 +2,23 @@ import { Navbar, Container } from "react-bootstrap";
 
 const NavBar = () => {
 	return (
-		<>
-			<Navbar bg="dark" variant="dark">
-				<Container fluid>
-					<Navbar.Brand href="#home">
-						<img
-							alt=""
-							src="/img/logo.svg"
-							width="30"
-							height="30"
-							className="d-inline-block align-top"
-						/>{" "}
-						React Bootstrap
-					</Navbar.Brand>
-				</Container>
-			</Navbar>
-		</>
+		<Navbar
+			style={{
+				backgroundColor: "#1C4584",
+			}}
+			className="p-0"
+		>
+			<Container fluid className="p-0">
+				<Navbar.Brand>
+					<img
+						alt=""
+						src="/images/Logo.png"
+						width="120"
+						className="d-inline-block align-top bg-white"
+					/>
+				</Navbar.Brand>
+			</Container>
+		</Navbar>
 	);
 };
 

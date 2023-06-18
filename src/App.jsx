@@ -11,13 +11,14 @@ function App() {
 				<Routes>
 					<Route path="/" element={<MainNav />}>
 						{links.map((i) => {
-							return (
-								<Route
-									path={i.link}
-									name={i.name}
-									key={i.icon}
-									element={i.element}
-								/>
+							return i.subLinks ? (
+								<Route path={i.link} key={i.icon} element={i.element}>
+									{i.subLinks.map((j) => (
+										<Route path={j.link} key={j.link} element={j.element} />
+									))}
+								</Route>
+							) : (
+								<Route path={i.link} key={i.icon} element={i.element} />
 							);
 						})}
 					</Route>
